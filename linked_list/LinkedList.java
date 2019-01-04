@@ -2,8 +2,8 @@ package ds.linked_list;
 
 public class LinkedList {
 
-	Node<Object> firstNode;
-	Node<Object> lastNode;
+	private Node<Object> firstNode;
+	private Node<Object> lastNode;
 		
 	public void insertFirst(Object value) {
 		Node<Object> n = new Node<Object>(value);
@@ -56,4 +56,13 @@ public class LinkedList {
 		}
 		System.out.print("]");
 	}
+
+	public Node<Object> getFirstNode() {
+		return firstNode;
+	}
+
+	public Node<Object> getLastNode() {
+		return lastNode;
+	}
+	
 }

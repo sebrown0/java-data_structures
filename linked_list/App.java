@@ -12,6 +12,10 @@ public class App {
 		lList.printList();
 		lList.deleteFirst();
 		lList.printList();
+		
+		System.out.println(lList.getFirstNode().value);
+		Node<Object> n = lList.getLastNode();
+		System.out.println(n.value);
 	}
 	
 }
