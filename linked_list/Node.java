@@ -1,11 +1,11 @@
 package ds.linked_list;
 
-public class Node {
+public class Node <i>{
 
-	int value;
-	Node nextNode = null;
+	i value;
+	Node<i> nextNode = null;
 		
-	public Node(int value) {
+	public Node(i value) {
 		super();
 		this.value = value;
 	}	

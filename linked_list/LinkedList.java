@@ -2,11 +2,11 @@ package ds.linked_list;
 
 public class LinkedList {
 
-	Node firstNode;
-	Node lastNode;
+	Node<Object> firstNode;
+	Node<Object> lastNode;
 		
-	public void insertFirst(int value) {
-		Node n = new Node(value);
+	public void insertFirst(Object value) {
+		Node<Object> n = new Node<Object>(value);
 		n.nextNode = firstNode;
 		firstNode = n;
 		
@@ -14,18 +14,18 @@ public class LinkedList {
 			lastNode = firstNode;
 	}
 
-	public void insertLast(int value) {		
+	public void insertLast(Object value) {		
 		if(!isEmpty(lastNode)) {
-			Node n = lastNode;
-			n.nextNode = new Node(value);
+			Node<Object> n = lastNode;
+			n.nextNode = new Node<Object>(value);
 			lastNode = n.nextNode;
 		}else {
 			insertFirst(value);
 		}
 	}
 	
-	public int deleteFirst() {
-		int value = 0;
+	public Object deleteFirst() {
+		Object value = null;
 		if(!isEmpty(firstNode)) {
 			value = firstNode.value;
 			firstNode = firstNode.nextNode;
@@ -33,11 +33,11 @@ public class LinkedList {
 		return value;
 	}
 	
-	public boolean isEmpty(Node n) {
+	public boolean isEmpty(Node<Object> n) {
 		return (n == null);
 	}
 		
-	public int listLen(Node n) {
+	public int listLen(Node<?> n) {
 		int idx = 0;
 		while (n != null) {
 			idx++;
@@ -47,7 +47,7 @@ public class LinkedList {
 	}
 	
 	public void printList() {
-		Node n = firstNode;
+		Node<Object> n = firstNode;
 		System.out.println();
 		System.out.print("[");
 		while(n != null) {

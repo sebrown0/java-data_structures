@@ -6,24 +6,10 @@ public class App {
 
 		LinkedList lList = new LinkedList();
 		
-//		lList.insertLast(77777777);
-//		lList.printList();
-//		
-		lList.insertFirst(101);
+		lList.insertFirst("Hello");
+		lList.insertLast("number");
+		lList.insertLast(1);
 		lList.printList();
-//		
-//		lList.insertLast(201);
-//		lList.printList();
-//		
-//		lList.insertFirst(11011);
-//		lList.insertLast(999203999);
-//		lList.printList();
-//		
-		lList.deleteFirst();
-		lList.deleteFirst();
-		lList.deleteFirst();
-		lList.deleteFirst();
-		lList.deleteFirst();
 		lList.deleteFirst();
 		lList.printList();
 	}
