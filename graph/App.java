@@ -6,19 +6,25 @@ public class App {
 
 		Graph graph = new Graph(5);
 		
-		graph.addVertex("State St");
-		graph.addVertex("Avenel St");
-		graph.addVertex("Pocono St");
-		graph.addVertex("William Ave");
-		graph.addVertex("Elm St");
+		Vertex vState =  graph.addVertex("State St");
+		Vertex vAvenel = graph.addVertex("Avenel St");
+		Vertex vPocono = graph.addVertex("Pocono St");
+		Vertex vWilliam = graph.addVertex("William Ave");
+		Vertex vElm = graph.addVertex("Elm St");
+		graph.displayVertices();
 		
-		graph.addEdge("State St", "Avenel St");
-		graph.addEdge("State St", "Elm St");
-		graph.addEdge("Avenel St", "Pocono St");
-		graph.addEdge("Pocono St", "Elm St");
-		graph.addEdge("William Ave", "Pocono St");
-		graph.addEdge("William Ave", "State St");
-		graph.addEdge("Elm St", "Avenel St");
+		System.out.println(graph.addEdge("State St", vAvenel));
+		System.out.println(graph.addEdge("State St", vElm));
+
+		System.out.println(graph.addEdge("Avenel St", vPocono));
+		
+		graph.addEdge("Pocono St", vElm);
+		
+		graph.addEdge("William Ave", vPocono );
+		graph.addEdge("William Ave", vState);
+		
+		graph.addEdge("Elm St", vAvenel);
+		graph.addEdge("Elm St", vWilliam);
 		
 		graph.displayVerticesWithEdges();
 		
